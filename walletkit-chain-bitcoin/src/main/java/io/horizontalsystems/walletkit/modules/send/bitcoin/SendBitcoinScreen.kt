@@ -204,9 +204,9 @@ fun SendBitcoinScreen(
                 rate = rate
             )
 
-            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
-                PrivateSendToggleSection(privateSendViewModel, navigation)
-            }
+            //Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+            //    PrivateSendToggleSection(privateSendViewModel, navigation)
+            //}
 
             VSpacer(16.dp)
             // Stays editable under Private send but warns that the memo cannot travel:

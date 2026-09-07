@@ -113,9 +113,9 @@ fun SendSolanaScreen(
             rate = viewModel.coinRate
         )
 
-        Column(modifier = Modifier.padding(horizontal = 16.dp)) {
-            PrivateSendToggleSection(privateSendViewModel, navigation)
-        }
+        //Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+        //    PrivateSendToggleSection(privateSendViewModel, navigation)
+        //}
 
         val forResult = navigation.slideFromBottomForResult<AddressRiskySheet.Result>(
             {
