@@ -38,7 +38,8 @@ interface IAppConfigProvider {
     val twitterBearerToken: String
     val etherscanApiKey: List<String>
     val bscscanApiKey: List<String>
-    val otherScanApiKey: List<String>
+    val blockscoutApiKey: List<String>
+    val alchemyApiKey: List<String>
     val guidesUrl: String
     val eduUrl: String
     val faqUrl: String

@@ -47,7 +47,7 @@ class MainApp : App() {
         ChainRegistry.register(MoneroChainPlugin({ App.instance }, { App.moneroNodeManager }))
         ChainRegistry.register(ZanoChainPlugin({ App.zanoNodeManager }, { App.backgroundManager }))
         ChainRegistry.register(ZcashChainPlugin({ App.instance }, { App.zcashEndpointManager }, { App.localStorage }))
-        ChainRegistry.register(SolanaChainPlugin({ BuildConfig.SOLANA_ALCHEMY_API_KEY }, { BuildConfig.SOLANA_JUPITER_API_KEY }))
+        ChainRegistry.register(SolanaChainPlugin({ BuildConfig.ALCHEMY_API_KEY }, { BuildConfig.SOLANA_JUPITER_API_KEY }))
         ChainRegistry.register(StellarChainPlugin())
         ChainRegistry.register(TonChainPlugin())
         ChainRegistry.register(ThorchainChainPlugin())

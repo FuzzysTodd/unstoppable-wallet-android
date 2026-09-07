@@ -150,6 +150,12 @@ class EvmSyncSourceManager(
             BlockchainType.RobinhoodChain -> listOf(
                 evmSyncSource(
                     blockchainType,
+                    "Alchemy",
+                    appConfigProvider.alchemyApiKey.map { URI("https://robinhood-mainnet.g.alchemy.com/v2/$it") },
+                    displayUrl = "https://robinhood-mainnet.g.alchemy.com"
+                ),
+                evmSyncSource(
+                    blockchainType,
                     "Robinhood Chain",
                     listOf(URI("https://rpc.mainnet.chain.robinhood.com"))
                 )
@@ -247,11 +253,13 @@ class EvmSyncSourceManager(
         blockchainType: BlockchainType,
         name: String,
         uris: List<URI>,
+        displayUrl: String? = null,
     ) =
         EvmSyncSource(
             id = "${blockchainType.uid}|${name}|${uris.joinToString(separator = ",") { it.toString() }}",
             name = name,
             uris = uris,
+            displayUrl = displayUrl,
         )
 
     fun allSyncSources(blockchainType: BlockchainType): List<EvmSyncSource> =

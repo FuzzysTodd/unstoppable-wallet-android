@@ -37,7 +37,8 @@ class AppConfigProvider(localStorage: ILocalStorage) : IAppConfigProvider {
     override val twitterBearerToken = BuildConfig.TWITTER_BEARER_TOKEN
     override val etherscanApiKey = BuildConfig.ETHERSCAN_KEY.split(",")
     override val bscscanApiKey = BuildConfig.BSCSCAN_KEY.split(",")
-    override val otherScanApiKey = BuildConfig.OTHER_SCAN_KEY.split(",")
+    override val blockscoutApiKey = BuildConfig.BLOCKSCOUT_KEY.split(",")
+    override val alchemyApiKey = BuildConfig.ALCHEMY_API_KEY.split(",")
     override val guidesUrl = BuildConfig.GUIDES_URL
     override val eduUrl = BuildConfig.EDU_URL
     override val faqUrl = BuildConfig.FAQ_URL

@@ -51,6 +51,7 @@ val Token.iconPlaceholder: Int
         else -> R.drawable.coin_placeholder
     }
 
+// Short label for token badges; the full chain name stays in `BlockchainType.title`.
 val TokenQuery.protocolType: String?
     get() = when (tokenType) {
         is TokenType.Native -> {
@@ -60,6 +61,7 @@ val TokenQuery.protocolType: String?
                 BlockchainType.Tron,
                 BlockchainType.Ton -> null
 
+                BlockchainType.RobinhoodChain -> "Robinhood"
                 else -> blockchainType.title
             }
         }
@@ -69,6 +71,7 @@ val TokenQuery.protocolType: String?
                 BlockchainType.Ethereum -> "ERC20"
                 BlockchainType.BinanceSmartChain -> "BEP20"
                 BlockchainType.Tron -> "TRC20"
+                BlockchainType.RobinhoodChain -> "Robinhood"
                 else -> blockchainType.title
             }
         }

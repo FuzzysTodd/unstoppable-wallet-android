@@ -47,7 +47,7 @@ class EvmNetworkViewModel(
                 syncSource = evmSyncSource,
                 id = evmSyncSource.id,
                 name = evmSyncSource.name,
-                url = evmSyncSource.uris.first().toString(),
+                url = evmSyncSource.urlForDisplay,
                 selected = evmSyncSource.id == currentSyncSourceId
             )
         }
