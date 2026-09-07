@@ -1266,6 +1266,8 @@
     <string name="Appearance_HideMarketsTab_Tip">Hide the Markets tab completely.</string>
     <string name="Appearance_HideBalanceTabButtons">Hide Buttons</string>
     <string name="Appearance_HideBalanceTabButtons_Tip">Hide the Send, Receive, and Swap buttons from the Balance tab.</string>
+    <string name="Appearance_ChartButton">Chart Button</string>
+    <string name="Appearance_ChartButton_Tip">Show the Chart button on the token balance page.</string>
     <string name="Appearance_AmountRounding">Amount Rounding</string>
     <string name="Appearance_AmountRounding_Tip">Display rounded balances and transaction amounts.</string>
     <string name="Appearance_BalanceAutoHide">Balance Auto Hide</string>

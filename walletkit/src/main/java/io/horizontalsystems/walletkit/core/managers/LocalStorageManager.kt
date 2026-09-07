@@ -619,6 +619,13 @@ class LocalStorageManager(
             balanceTabButtonsEnabledFlow.update { value }
         }
 
+    override var chartButtonEnabled: Boolean
+        get() = preferences.getBoolean("chartButtonEnabled", true)
+        set(value) {
+            preferences.edit { putBoolean("chartButtonEnabled", value) }
+            chartButtonEnabledFlow.update { value }
+        }
+
     override var amountRoundingEnabled: Boolean
         get() = preferences.getBoolean("amountRoundingEnabled", true)
         set(value) {
@@ -627,6 +634,7 @@ class LocalStorageManager(
         }
 
     override val balanceTabButtonsEnabledFlow = MutableStateFlow(balanceTabButtonsEnabled)
+    override val chartButtonEnabledFlow = MutableStateFlow(chartButtonEnabled)
     override val amountRoundingEnabledFlow = MutableStateFlow(amountRoundingEnabled)
 
     override var personalSupportEnabled: Boolean

@@ -238,6 +238,19 @@ fun AppearanceScreen(navigation: HSNavigation) {
                     },
                     {
                         SettingUniversalCell(
+                            title = R.string.Appearance_ChartButton,
+                            subtitle = R.string.Appearance_ChartButton_Tip,
+                        ) {
+                            HsSwitch(
+                                checked = uiState.chartButtonEnabled,
+                                onCheckedChange = {
+                                    viewModel.onChartButtonToggle(it)
+                                }
+                            )
+                        }
+                    },
+                    {
+                        SettingUniversalCell(
                             title = R.string.Appearance_AmountRounding,
                             subtitle = R.string.Appearance_AmountRounding_Tip,
                         ) {

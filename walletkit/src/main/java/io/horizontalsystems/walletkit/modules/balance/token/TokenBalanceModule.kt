@@ -70,6 +70,7 @@ class TokenBalanceModule {
         val showTronNotActiveAlert: Boolean,
         val showSyncErrorAlert: Boolean,
         val zcashMigrationRequiredAmount: String? = null,
+        val chartButtonEnabled: Boolean,
     )
 
     data class TokenBalanceError(

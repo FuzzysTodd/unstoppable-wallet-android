@@ -215,6 +215,7 @@ fun TokenBalanceScreen(
                         receiveAddress = uiState.receiveAddress,
                         warning = uiState.warningMessage,
                         onClickReceive = onClickReceive,
+                        chartButtonEnabled = uiState.chartButtonEnabled,
                         trailingContent = trailingContent,
                     )
 
@@ -455,6 +456,7 @@ private fun TokenBalanceHeader(
     receiveAddress: String?,
     warning: String?,
     onClickReceive: () -> Unit,
+    chartButtonEnabled: Boolean,
     trailingContent: (@Composable () -> Unit)? = null,
 ) {
     val context = LocalContext.current
@@ -532,6 +534,7 @@ private fun TokenBalanceHeader(
             ButtonsRow(
                 viewItem = balanceViewItem,
                 navigation = navigation,
+                chartButtonEnabled = chartButtonEnabled,
                 onClickReceive = onClickReceive
             )
         }
@@ -839,23 +842,26 @@ private fun LockedBalanceZcashCell(
 private fun ButtonsRow(
     viewItem: BalanceViewItem,
     navigation: HSNavigation,
+    chartButtonEnabled: Boolean,
     onClickReceive: () -> Unit
 ) {
     BalanceButtonsGroup {
-        BalanceActionButton(
-            variant = ButtonVariant.Primary,
-            icon = R.drawable.ic_balance_chart_24,
-            title = stringResource(R.string.Coin_Chart),
-            enabled = !viewItem.wallet.token.isCustom,
-            onClick = {
-                val coinUid = viewItem.wallet.coin.uid
-                val arguments = CoinPage.Input(coinUid)
+        if (chartButtonEnabled) {
+            BalanceActionButton(
+                variant = ButtonVariant.Primary,
+                icon = R.drawable.ic_balance_chart_24,
+                title = stringResource(R.string.Coin_Chart),
+                enabled = !viewItem.wallet.token.isCustom,
+                onClick = {
+                    val coinUid = viewItem.wallet.coin.uid
+                    val arguments = CoinPage.Input(coinUid)
 
-                navigation.slideFromRight(CoinPage(arguments))
+                    navigation.slideFromRight(CoinPage(arguments))
 
-                stat(page = StatPage.TokenPage, event = StatEvent.OpenCoin(coinUid))
-            },
-        )
+                    stat(page = StatPage.TokenPage, event = StatEvent.OpenCoin(coinUid))
+                },
+            )
+        }
         BalanceActionButton(
             variant = ButtonVariant.Secondary,
             icon = R.drawable.ic_arrow_down_24,

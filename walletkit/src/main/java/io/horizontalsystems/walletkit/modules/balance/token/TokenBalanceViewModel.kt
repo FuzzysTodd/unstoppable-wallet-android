@@ -62,8 +62,16 @@ class TokenBalanceViewModel(
     private var showTronNotActiveAlert: Boolean? = null
     private var showSyncErrorAlert: Boolean? = null
     private var zcashMigrationRequiredAmount: String? = null
+    private var chartButtonEnabled = localStorage.chartButtonEnabledFlow.value
 
     init {
+        viewModelScope.launch {
+            localStorage.chartButtonEnabledFlow.collect {
+                chartButtonEnabled = it
+                emitState()
+            }
+        }
+
         viewModelScope.launch(Dispatchers.IO) {
             balanceService.balanceItemFlow.collect { balanceItem ->
                 balanceItem?.let {
@@ -122,6 +130,7 @@ class TokenBalanceViewModel(
         showTronNotActiveAlert = showTronNotActiveAlert ?: false,
         showSyncErrorAlert = showSyncErrorAlert ?: false,
         zcashMigrationRequiredAmount = zcashMigrationRequiredAmount,
+        chartButtonEnabled = chartButtonEnabled,
     )
 
     private fun setReceiveAddressForWatchAccount() {
