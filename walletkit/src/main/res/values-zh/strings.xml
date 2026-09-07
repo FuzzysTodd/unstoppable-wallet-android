@@ -1865,4 +1865,6 @@
     <string name="NetworkSettings_Latency">%d ms</string>
     <string name="ZcashEndpointSettings_AutoSelectDescription">自动使用最快的服务器</string>
     <string name="Send_Hodler_PrivateSendUnavailable">启用Private Send时不可用。</string>
+    <string name="Appearance_ChartButton">图表按钮</string>
+    <string name="Appearance_ChartButton_Tip">在代币余额页面上显示图表按钮。</string>
 </resources>

@@ -1874,4 +1874,6 @@
     <string name="NetworkSettings_Latency">%d ms</string>
     <string name="ZcashEndpointSettings_AutoSelectDescription">Verwenden Sie automatisch den schnellsten Server</string>
     <string name="Send_Hodler_PrivateSendUnavailable">Nicht verfügbar, wenn Private Send aktiviert ist.</string>
+    <string name="Appearance_ChartButton">Diagramm-Schaltfläche</string>
+    <string name="Appearance_ChartButton_Tip">Zeige die Diagramm-Schaltfläche auf der Token-Bilanzseite an.</string>
 </resources>

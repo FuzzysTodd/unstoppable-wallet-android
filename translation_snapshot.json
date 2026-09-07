@@ -64,6 +64,8 @@
     "Appearance_BalanceTab": "BALANCE TAB",
     "Appearance_BalanceValue": "Coin Balances",
     "Appearance_BalanceValue_Tip": "Show balances highlighted in either crypto or fiat.",
+    "Appearance_ChartButton": "Chart Button",
+    "Appearance_ChartButton_Tip": "Show the Chart button on the token balance page.",
     "Appearance_HideBalanceTabButtons": "Hide Buttons",
     "Appearance_HideBalanceTabButtons_Tip": "Hide the Send, Receive, and Swap buttons from the Balance tab.",
     "Appearance_HideMarketsTab": "Hide Markets",

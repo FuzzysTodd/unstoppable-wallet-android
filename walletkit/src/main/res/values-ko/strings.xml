@@ -1866,4 +1866,6 @@
     <string name="NetworkSettings_Latency">%d ms</string>
     <string name="ZcashEndpointSettings_AutoSelectDescription">가장 빠른 서버를 자동으로 사용</string>
     <string name="Send_Hodler_PrivateSendUnavailable">Private Send가 켜져 있을 때는 사용할 수 없습니다.</string>
+    <string name="Appearance_ChartButton">차트 버튼</string>
+    <string name="Appearance_ChartButton_Tip">토큰 잔액 페이지에 차트 버튼을 표시합니다.</string>
 </resources>

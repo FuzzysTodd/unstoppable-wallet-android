@@ -1872,4 +1872,6 @@
     <string name="NetworkSettings_Latency">%d ms</string>
     <string name="ZcashEndpointSettings_AutoSelectDescription">Автоматически использовать самый быстрый сервер</string>
     <string name="Send_Hodler_PrivateSendUnavailable">Недоступно, когда включена функция Private Send.</string>
+    <string name="Appearance_ChartButton">Кнопка Графика</string>
+    <string name="Appearance_ChartButton_Tip">Показать кнопку графика на странице баланса токена.</string>
 </resources>

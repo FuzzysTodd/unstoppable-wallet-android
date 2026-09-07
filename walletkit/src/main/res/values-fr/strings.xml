@@ -1867,4 +1867,6 @@
     <string name="NetworkSettings_Latency">%d ms</string>
     <string name="ZcashEndpointSettings_AutoSelectDescription">Utiliser automatiquement le serveur le plus rapide</string>
     <string name="Send_Hodler_PrivateSendUnavailable">Non disponible lorsque Private Send est activé.</string>
+    <string name="Appearance_ChartButton">Bouton Graphique</string>
+    <string name="Appearance_ChartButton_Tip">Afficher le bouton Graphique sur la page de solde des tokens.</string>
 </resources>

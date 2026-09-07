@@ -1866,4 +1866,6 @@
     <string name="NetworkSettings_Latency">%d ms</string>
     <string name="ZcashEndpointSettings_AutoSelectDescription">En hızlı sunucuyu otomatik olarak kullan</string>
     <string name="Send_Hodler_PrivateSendUnavailable">Private Send açık olduğunda kullanılamaz.</string>
+    <string name="Appearance_ChartButton">Grafik Düğmesi</string>
+    <string name="Appearance_ChartButton_Tip">Token bakiyesi sayfasında Grafik düğmesini gösterin.</string>
 </resources>

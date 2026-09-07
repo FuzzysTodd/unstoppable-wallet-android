@@ -799,4 +799,6 @@
     <string name="ZcashEndpointSettings_AutoSelectDescription">استفاده خودکار از سریع‌ترین سرور</string>
     <string name="Send_Hodler_Description">TimeLock فقط برای ارسال به آدرس‌های BIP44 (شروع‌شده با 1) کار می‌کند.</string>
     <string name="Send_Hodler_PrivateSendUnavailable">در دسترس نیست هنگامی که Private Send فعال است.</string>
+    <string name="Appearance_ChartButton">دکمه نمودار</string>
+    <string name="Appearance_ChartButton_Tip">نمایش دکمه نمودار در صفحه موجودی توکن.</string>
 </resources>
