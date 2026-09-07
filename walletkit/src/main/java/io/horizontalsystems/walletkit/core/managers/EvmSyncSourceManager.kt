@@ -39,7 +39,7 @@ class EvmSyncSourceManager(
             BlockchainType.Ethereum -> listOf(
                 evmSyncSource(
                     blockchainType,
-                    "BlocksDecoded",
+                    "Unstoppable",
                     listOf(URI(appConfigProvider.blocksDecodedEthereumRpc))
                 ),
                 evmSyncSource(
@@ -148,6 +148,11 @@ class EvmSyncSourceManager(
             )
 
             BlockchainType.RobinhoodChain -> listOf(
+                evmSyncSource(
+                    blockchainType,
+                    "Unstoppable",
+                    listOf(URI("https://robinhood-rpc.unstoppable.money"))
+                ),
                 evmSyncSource(
                     blockchainType,
                     "Alchemy",
