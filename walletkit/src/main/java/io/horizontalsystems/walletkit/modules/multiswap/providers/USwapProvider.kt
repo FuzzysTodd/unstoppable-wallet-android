@@ -407,8 +407,21 @@ class USwapProvider(
         buyAsset: String?,
     ): UnstoppableAPI.Response.Route {
         val usingDerivedIdentifiers = assetsMap.isEmpty()
-        val assetIn = sellAsset ?: assetsMap[tokenIn] ?: deriveIdentifier(tokenIn) ?: throw IllegalStateException("No identifier for tokenIn")
-        val assetOut = buyAsset ?: assetsMap[tokenOut] ?: deriveIdentifier(tokenOut) ?: throw IllegalStateException("No identifier for tokenOut")
+        // Providers on derived identifiers (LI.FI, Barter, Jupiter) must commit with the SAME
+        // asset spelling the rate request used. The route echoes a server-normalized form
+        // (`ROBINHOOD.ETH` for `ROBINHOOD.0xeee…`) that the server's own resolver does not
+        // accept back on every chain. The route passthrough stays for token-list providers:
+        // Exolix's shielded Zcash variant is chosen at rate time and must be committed as such.
+        val assetIn = if (usingDerivedIdentifiers) {
+            deriveIdentifier(tokenIn)
+        } else {
+            sellAsset ?: assetsMap[tokenIn]
+        } ?: throw IllegalStateException("No identifier for tokenIn")
+        val assetOut = if (usingDerivedIdentifiers) {
+            deriveIdentifier(tokenOut)
+        } else {
+            buyAsset ?: assetsMap[tokenOut]
+        } ?: throw IllegalStateException("No identifier for tokenOut")
         val chainId = if (usingDerivedIdentifiers) chainIdByBlockchainType[tokenIn.blockchainType] else null
 
         val request = UnstoppableAPI.Request.Swap(
